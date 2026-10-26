@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "_LoginLayout";
+}
+
+<main class="login-shell">
+    <a class="back-link back-link-dark" href="~/registration" aria-label="Back to welcome page"><i class="bi bi-arrow-left"></i></a>
+    <div class="login-brand brand brand-light">
+        <span class="brand-mark"><i class="bi bi-house-gear-fill"></i></span>
+        <span class="brand-copy"><strong>Service<span>ly</span></strong><small>HOME SERVICES</small></span>
+    </div>
+    <section class="login-card">
+        <div class="login-orb orb-top"></div><div class="login-orb orb-bottom"></div>
+        <div class="login-heading">
+            <span class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> GOOD TO SEE YOU AGAIN</span>
+            <h1>Welcome Back <span class="wave">✦</span></h1>
+            <p>Login to your account</p>
+        </div>
+        <form id="loginForm" novalidate>
+            <div class="field-group">
+                <label for="loginEmail">Email Address</label>
+                <div class="input-wrap dark-input"><i class="bi bi-envelope"></i><input id="loginEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+                <div class="invalid-feedback">Enter a valid email address.</div>
+            </div>
+            <div class="field-group">
+                <label for="loginPassword">Password</label>
+                <div class="input-wrap dark-input"><i class="bi bi-lock"></i><input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required minlength="8"><button class="password-toggle dark-toggle" type="button" data-toggle-password="loginPassword" aria-label="Show password"><i class="bi bi-eye"></i></button></div>
+                <div class="invalid-feedback">Enter your password (at least 8 characters).</div>
+            </div>
+            <div class="login-forgot-row"><span></span><a href="~/forgot-password">Forgot Password?</a></div>
+            <div class="form-alert" id="loginAlert" role="alert" hidden></div>
+            <button class="btn btn-gradient w-100 login-submit" type="submit">Login <i class="bi bi-arrow-right"></i></button>
+        </form>
+        <div class="social-divider"><span></span><small>or</small><span></span></div>
+        <p class="social-label">Login with</p>
+        <div class="social-buttons">
+            <button type="button" class="social-button" data-social-login="Google"><span class="google-g">G</span> Google</button>
+            <button type="button" class="social-button" data-social-login="Apple"><i class="bi bi-apple"></i> Apple</button>
+        </div>
+        <p class="login-register">Don't have an account? <a href="~/registration">Register</a></p>
+        <p class="login-demo-note"><i class="bi bi-info-circle"></i> Demo only — connect your ASP.NET Core API for real sign-in.</p>
+    </section>
+    <div class="login-footer"><i class="bi bi-shield-check"></i> Your home services, all in one place</div>
+</main>

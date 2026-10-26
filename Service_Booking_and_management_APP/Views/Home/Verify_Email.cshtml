@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<main class="auth-shell verify-shell">
+    <a class="back-link" href="~/splash" aria-label="Back to registration"><i class="bi bi-arrow-left"></i></a>
+    <div class="auth-brand brand">
+        <span class="brand-mark"><i class="bi bi-house-gear-fill"></i></span>
+        <span class="brand-copy"><strong>Service<span>ly</span></strong><small>HOME SERVICES</small></span>
+    </div>
+    <section class="auth-card verify-card">
+        <div class="email-illustration">
+            <div class="mail-halo"></div><div class="mail-icon"><i class="bi bi-envelope"></i></div>
+            <span class="mail-spark spark-one"><i class="bi bi-stars"></i></span><span class="mail-spark spark-two"><i class="bi bi-check-circle-fill"></i></span>
+        </div>
+        <div class="auth-heading text-center">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> ONE LAST STEP</span>
+            <h1>Verify Your Email</h1>
+            <p>We have sent a 6-digit OTP to<br><strong class="email-display" id="emailDisplay">you@example.com</strong></p>
+        </div>
+        <form id="otpForm" novalidate>
+            <div class="otp-inputs" role="group" aria-label="Six-digit verification code">
+                <input class="otp-input" aria-label="Digit 1" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
+                <input class="otp-input" aria-label="Digit 2" inputmode="numeric" maxlength="1">
+                <input class="otp-input" aria-label="Digit 3" inputmode="numeric" maxlength="1">
+                <input class="otp-input" aria-label="Digit 4" inputmode="numeric" maxlength="1">
+                <input class="otp-input" aria-label="Digit 5" inputmode="numeric" maxlength="1">
+                <input class="otp-input" aria-label="Digit 6" inputmode="numeric" maxlength="1">
+            </div>
+            <div class="otp-error" id="otpError" role="alert" hidden>Please enter all 6 digits.</div>
+            <div class="resend-row"><span id="resendMessage">Didn't receive the code?</span><button type="button" id="resendButton" disabled>Resend OTP <span id="countdown">in 00:45</span></button></div>
+            <button class="btn btn-gradient w-100 verify-submit" type="submit">Verify <i class="bi bi-arrow-right"></i></button>
+        </form>
+        <a class="change-email" href="~/registration"><i class="bi bi-pencil-square"></i> Change Email</a>
+        <div class="demo-note"><i class="bi bi-info-circle"></i> Frontend demo: OTP delivery and verification will be connected to your ASP.NET Core API.</div>
+    </section>
+    <div class="auth-bottom-note"><i class="bi bi-shield-lock"></i> A little security goes a long way</div>
+</main>
